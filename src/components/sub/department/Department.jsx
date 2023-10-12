@@ -8,12 +8,18 @@ const path = process.env.PUBLIC_URL;
 
 export default function Department() {
 	const [Department, setDepartment] = useState([]);
+	const [News, setNews] = useState([]);
 
 	useEffect(() => {
 		fetch(`${path}/DB/department.json`)
 			.then((data) => data.json())
 			.then((json) => {
 				setDepartment(json.members);
+			});
+		fetch(`${path}/DB/news.json`)
+			.then((data) => data.json())
+			.then((json) => {
+				setNews(json.news);
 			});
 	}, []);
 
@@ -28,8 +34,8 @@ export default function Department() {
 						</span>
 					</div>
 					<div className='imgBox'>
-						<img src='img/First.jpg' alt='a' />
-						<img src='img/First.jpg' alt='a' />
+						<img src='img/First.jpg' alt='1' />
+						<img src='img/First.jpg' alt='1' />
 					</div>
 				</div>
 			</div>
@@ -50,9 +56,23 @@ export default function Department() {
 					})}
 				</div>
 			</div>
-			<div></div>
 			<h1 className='lastTit'>News</h1>
-			<div className='bottomContainer'></div>
+			<div className='bottomContainer'>
+				<div className='newsBox'>
+					{News.map((news, idx) => {
+						return (
+							<article key={idx}>
+								<div className='pic'>
+									<img src={`${path}/img/${news.pic}`} alt={news.name} />
+									<img src={`${path}/img/${news.pic}`} alt={news.name} />
+								</div>
+								<h2>{news.date}</h2>
+								<p>{news.txt}</p>
+							</article>
+						);
+					})}
+				</div>
+			</div>
 		</Layout>
 	);
 }

@@ -3,11 +3,12 @@
     {
       "date": "Lorem, ipsum dolor.",
       "txt": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptatibus doloremque corrupti praesentium.",
-      "pic": ""
+      "pic": "Second.jpg"
     },
     {
       "date": "Lorem, ipsum dolor.",
-      "txt": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptatibus doloremque corrupti praesentium."
+      "txt": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptatibus doloremque corrupti praesentium.",
+      "pic": "Third.jpg"
     }
   ]
 }
