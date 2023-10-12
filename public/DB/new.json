@@ -1,0 +1,13 @@
+{
+  "news": [
+    {
+      "date": "Lorem, ipsum dolor.",
+      "txt": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptatibus doloremque corrupti praesentium.",
+      "pic": ""
+    },
+    {
+      "date": "Lorem, ipsum dolor.",
+      "txt": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptatibus doloremque corrupti praesentium."
+    }
+  ]
+}

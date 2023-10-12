@@ -1,7 +1,7 @@
 {
   "members": [
     {
-      "name": "David",
+      "name": "Mia",
       "position": "President",
       "pic": "member1.jpg"
     },
@@ -16,7 +16,7 @@
       "pic": "member3.jpg"
     },
     {
-      "name": "Michael",
+      "name": "Chloe",
       "position": "Front-end Developer",
       "pic": "member4.jpg"
     },
@@ -26,7 +26,7 @@
       "pic": "member5.jpg"
     },
     {
-      "name": "Peter",
+      "name": "Zoe",
       "position": "Project Manager",
       "pic": "member6.jpg"
     }

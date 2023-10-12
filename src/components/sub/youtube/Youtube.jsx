@@ -33,7 +33,13 @@ export default function Youtube() {
 					let date = data.snippet.publishedAt;
 
 					return (
-						<article key={idx}>
+						<article
+							key={idx}
+							onClick={() => {
+								setIndex(idx);
+								setIsModal(true);
+							}}
+						>
 							<div className='blackBox'></div>
 							<div className='titBox'>
 								<h2>{tit.length > 60 ? tit.substr(0, 60) + '...' : tit}</h2>
@@ -42,13 +48,7 @@ export default function Youtube() {
 								<p>{desc.length > 60 ? desc.substr(0, 180) + '...' : desc}</p>
 								<span>{date.split('T')[0].split('-').join('.')}</span>
 							</div>
-							<div
-								className='picBox'
-								onClick={() => {
-									setIndex(idx);
-									setIsModal(true);
-								}}
-							>
+							<div className='picBox'>
 								<img src={data.snippet.thumbnails.standard.url} alt={data.title} />
 								<img src={data.snippet.thumbnails.standard.url} alt={data.title} />
 							</div>

@@ -20,22 +20,21 @@ export default function Department() {
 	return (
 		<Layout title={'Department'}>
 			<div className='topContainer'>
-				<div className='txtBox'>
-					<span>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non ut nam natus rerum? Ipsa adipisci totam nihil provident, ut perspiciatis praesentium
-						rem!
-					</span>
-					<div className='inContainer'>
-						<div className='infoBox'></div>
-						<div className='imgBox'>
-							<img src='img/Department.jpg' />
-						</div>
+				<div className='infoBox'></div>
+				<div className='inContainer'>
+					<div className='txtBox'>
+						<span>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, eligendi quos. Quos iusto, accusamus commodi repudiandae tempora nostrum debitis
+							ipsa fugiat voluptatibus. Quo dignissimos impedit enim. Corrupti officia facere modi?
+						</span>
+					</div>
+					<div className='imgBox'>
+						<img src='img/First.jpg' alt='a' />
 					</div>
 				</div>
 			</div>
 			<h1>Our team</h1>
 			<div className='container'>
-				<div className='infoBox'></div>
 				<div className='memberBox'>
 					{Department.map((member, idx) => {
 						return (
