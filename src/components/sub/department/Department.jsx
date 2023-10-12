@@ -30,6 +30,7 @@ export default function Department() {
 					</div>
 					<div className='imgBox'>
 						<img src='img/First.jpg' alt='a' />
+						<img src='img/First.jpg' alt='a' />
 					</div>
 				</div>
 			</div>
