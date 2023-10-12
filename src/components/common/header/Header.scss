@@ -24,6 +24,10 @@
 				color: hotpink;
 				font-weight: bold;
 			}
+
+			&:hover {
+				transform: scale(1.05);
+			}
 		}
 	}
 }

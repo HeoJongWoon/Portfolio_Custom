@@ -110,19 +110,6 @@
 					}
 					h2 {
 						padding: 0.8rem 0rem;
-
-						&::before {
-							content: '';
-							position: absolute;
-							top: 120%;
-							left: 50%;
-							transform: translate(-50%, -10%);
-							display: block;
-							height: 2px;
-							width: 100%;
-							background: #555;
-							transition: 0.5s;
-						}
 					}
 					p {
 						padding: 0.3rem 0rem;
