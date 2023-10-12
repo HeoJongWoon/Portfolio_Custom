@@ -20,7 +20,6 @@ export default function Department() {
 	return (
 		<Layout title={'Department'}>
 			<div className='topContainer'>
-				<div className='infoBox'></div>
 				<div className='inContainer'>
 					<div className='txtBox'>
 						<span>

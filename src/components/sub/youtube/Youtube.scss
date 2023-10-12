@@ -2,6 +2,16 @@
 	.content {
 		.box {
 			padding-bottom: 2rem;
+
+			&:nth-of-type(even) {
+				.innerBox {
+					flex-direction: row-reverse;
+
+					.picBox {
+						transform: translateX(-20%);
+					}
+				}
+			}
 			.innerBox {
 				width: 100%;
 				display: flex;
@@ -11,13 +21,6 @@
 				border-bottom: 1px solid #888;
 				box-shadow: 10px 0px 20px 0px rgba(0, 0, 0, 0.1);
 
-				&:nth-of-type(even) {
-					flex-direction: row-reverse;
-
-					.picBox {
-						transform: translateX(-20%);
-					}
-				}
 				.blackBox {
 					width: 1%;
 				}
