@@ -19,6 +19,7 @@ function App() {
 					<Header isMain={true} />
 					<Main />
 				</Route>
+
 				<Route path='/'>
 					<Header isMain={false} />
 				</Route>
