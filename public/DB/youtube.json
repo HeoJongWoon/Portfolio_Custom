@@ -1,0 +1,19 @@
+{
+  "members": [
+    {
+      "name": "Mia",
+      "position": "President",
+      "pic": "member1.jpg"
+    },
+    {
+      "name": "Julia",
+      "position": "Vice President",
+      "pic": "member2.jpg"
+    },
+    {
+      "name": "Emily",
+      "position": "UI Designer",
+      "pic": "member3.jpg"
+    }
+  ]
+}
