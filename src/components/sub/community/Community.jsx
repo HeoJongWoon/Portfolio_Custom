@@ -39,6 +39,16 @@ export default function Community() {
 		);
 	};
 
+	//해당 글을 출력모드로 변경시키는 함수
+	const disableUpdate = (editIndex) => {
+		setPosts(
+			Posts.map((post, idx) => {
+				if (editIndex === idx) post.enableUpdate = false;
+				return post;
+			})
+		);
+	};
+
 	return (
 		<Layout title={'Community'}>
 			<div className='inputBox'>
@@ -55,31 +65,26 @@ export default function Community() {
 			<div className='showBox'>
 				{Posts.map((post, idx) => {
 					if (post.enableUpdate) {
+						//수정 모드 렌더링
 						return (
 							<article key={idx}>
 								<div className='txt'>
-									<input
-										type='text'
-										value={post.title}
-										onChange={(e) => {
-											console.log(e.target.value);
-										}}
-									/>
+									<input type='text' defaultValue={post.title} />
 									<br />
 									<textarea
 										//react에서 value속성을 적용하려면 무조건 onChange이벤트 연결 필수
 										//onChange이벤트 연결하지 않을때에는 value가닌 defaultValue속성 적용
-										value={post.content}
-										onChange={(e) => console.log(e.target.value)}
+										defaultValue={post.content}
 									/>
 								</div>
 								<nav className='btnSet'>
-									<button>Cancel</button>
+									<button onClick={() => disableUpdate(idx)}>Cancel</button>
 									<button>Update</button>
 								</nav>
 							</article>
 						);
 					} else {
+						//출력 모드 렌더링
 						return (
 							<article key={idx}>
 								<div className='txt'>
