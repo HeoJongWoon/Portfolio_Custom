@@ -27,7 +27,7 @@ export default function Community() {
 	};
 
 	return (
-		<Layout title={'Communtiy'}>
+		<Layout title={'Community'}>
 			<div className='inputBox'>
 				<input ref={refInput} type='text' placeholder='제목을 입력하세요.' />
 				<br />
