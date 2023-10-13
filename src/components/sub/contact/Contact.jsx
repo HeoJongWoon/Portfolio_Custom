@@ -138,18 +138,19 @@ export default function Contact() {
 	return (
 		<Layout title={'Contact'}>
 			<div className='upperBox'>
-				<div id='mailBox'>
+				<div id='mailbox'>
 					<form ref={form} onSubmit={sendEmail}>
-						<div className='upper'>
-							<span>
-								<label>Name</label>
-								<input type='text' name='user_name' className='nameEl' />
-							</span>
+						<div className='texBox'>
+							<h2>Send a Messge</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat distinctio saepe minus cumque deserunt tempore facere et est quia rem.</p>
+						</div>
 
-							<span>
-								<label>Email</label>
-								<input type='email' name='user_email' className='emailEl' />
-							</span>
+						<div className='upper'>
+							<label>Name</label>
+							<input type='text' name='user_name' className='nameEl' />
+
+							<label>Email</label>
+							<input type='email' name='user_email' className='emailEl' />
 						</div>
 
 						<div className='lower'>

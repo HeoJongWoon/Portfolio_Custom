@@ -3,6 +3,7 @@ import './styles/Variable.scss';
 import { Route, Switch } from 'react-router-dom';
 import Header from './components/common/header/Header';
 import Department from './components/sub/department/Department';
+import Community from './components/sub/community/Community';
 import Youtube from './components/sub/youtube/Youtube';
 import Members from './components/sub/members/Members';
 import Gallery from './components/sub/gallery/Gallery';
@@ -21,6 +22,7 @@ function App() {
 				</Route>
 			</Switch>
 			<Route path='/department' component={Department} />
+			<Route path='/community' component={Community} />
 			<Route path='/gallery' component={Gallery} />
 			<Route path='/youtube' component={Youtube} />
 			<Route path='/members' component={Members} />

@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './Detail.scss';
 
-function Detail() {
-	//url로 전단될 parameter값을 비구조화할당으로 받을 수 있음
+export default function Detail() {
+	//url로 전달될 parameter값을 비구조화할당으로 받을 수 있음
 	const { id } = useParams();
 	const [Data, setData] = useState(null);
 
@@ -20,15 +20,19 @@ function Detail() {
 				setData(json.items[0].snippet);
 			});
 	}, []);
+
 	return (
 		<Layout title={'Detail'}>
-			<h2>{Data?.title}</h2>
-			<p>{Data?.description}</p>
-			<div className='vidBox'>
-				<iframe src={`https://www.youtube.com/embed/${Data?.resourceId.videoId}`} title='youtube'></iframe>
+			<div id='Box'>
+				<div className='vidBox'>
+					<iframe src={`https://www.youtube.com/embed/${Data?.resourceId.videoId}`} title='youtube'></iframe>
+				</div>
+				<div className='txtBox'>
+					<h2>{Data?.title}</h2>
+					<p>{Data?.description}</p>
+					<span>{Data?.publishedAt.split('T')[0].split('-').join('.')}</span>
+				</div>
 			</div>
 		</Layout>
 	);
 }
-
-export default Detail;
