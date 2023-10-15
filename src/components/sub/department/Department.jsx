@@ -9,17 +9,17 @@ const path = process.env.PUBLIC_URL;
 export default function Department() {
 	const refSliderWrap = useRef(null);
 	const [Department, setDepartment] = useState([]);
-	const [News, setNews] = useState([]);
+	const [Subpage, setSubpage] = useState([]);
 
-	const next = () => {
-		const wrap = refSliderWrap.current;
-		wrap.append(wrap.firstElementChild);
-	};
+	// const next = () => {
+	// 	const wrap = refSliderWrap.current;
+	// 	wrap.append(wrap.firstElementChild);
+	// };
 
-	const prev = () => {
-		const wrap = refSliderWrap.current;
-		wrap.prepend(wrap.lastElementChild);
-	};
+	// const prev = () => {
+	// 	const wrap = refSliderWrap.current;
+	// 	wrap.prepend(wrap.lastElementChild);
+	// };
 
 	useEffect(() => {
 		fetch(`${path}/DB/department.json`)
@@ -27,16 +27,16 @@ export default function Department() {
 			.then((json) => {
 				setDepartment(json.members);
 			});
-		fetch(`${path}/DB/news.json`)
+		fetch(`${path}/DB/subpage.json`)
 			.then((data) => data.json())
 			.then((json) => {
-				setNews(json.news);
+				setSubpage(json.subbox);
 			});
 	}, []);
 
 	return (
 		<Layout title={'Department'}>
-			<div className='sliderBox'>
+			{/* <div className='sliderBox'>
 				<button className='b' onClick={prev}>
 					prev
 				</button>
@@ -51,7 +51,7 @@ export default function Department() {
 					<article>4</article>
 					<article>5</article>
 				</section>
-			</div>
+			</div> */}
 			<div className='topContainer'>
 				<div className='inContainer'>
 					<div className='txtBox'>
@@ -83,18 +83,18 @@ export default function Department() {
 					})}
 				</div>
 			</div>
-			<h1 className='lastTit'>News</h1>
+			<h1 className='lastTit'>Sub</h1>
 			<div className='bottomContainer'>
-				<div className='newsBox'>
-					{News.map((news, idx) => {
+				<div className='subBox'>
+					{Subpage.map((subbox, idx) => {
 						return (
 							<article key={idx}>
 								<div className='pic'>
-									<img src={`${path}/img/${news.pic}`} alt={news.name} />
-									<img src={`${path}/img/${news.pic}`} alt={news.name} />
+									<img src={`${path}/img/${subbox.pic}`} alt={subbox.name} />
+									<img src={`${path}/img/${subbox.pic}`} alt={subbox.name} />
 								</div>
-								<h2>{news.date}</h2>
-								<p>{news.txt}</p>
+								<h2>{subbox.date}</h2>
+								<p>{subbox.txt}</p>
 							</article>
 						);
 					})}

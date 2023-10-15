@@ -1,0 +1,19 @@
+{
+  "about": [
+    {
+      "tit": "Mail",
+      "lorem": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "information": "whddns0902@gmail.com"
+    },
+    {
+      "tit": "Blog",
+      "lorem": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "information": "https://blog.naver.com/ho_jw"
+    },
+    {
+      "tit": "GitHub",
+      "lorem": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "information": "https://github.com/heojongwoon"
+    }
+  ]
+}

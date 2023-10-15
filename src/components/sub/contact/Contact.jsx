@@ -2,12 +2,14 @@ import Layout from '../../common/layout/Layout';
 import './Contact.scss';
 import emailjs from '@emailjs/browser';
 import { useRef, useEffect, useState } from 'react';
+const path = process.env.PUBLIC_URL;
 
 export default function Contact() {
 	const form = useRef(null);
 	const map = useRef(null);
 	const view = useRef(null);
 	const instance = useRef(null);
+	const [Contact, setContact] = useState([]);
 	const [Traffic, setTraffic] = useState(false);
 	const [Index, setIndex] = useState(0);
 	const [IsMap, setIsMap] = useState(true);
@@ -135,6 +137,14 @@ export default function Contact() {
 		);
 	};
 
+	useEffect(() => {
+		fetch(`${path}/DB/contact.json`)
+			.then((data) => data.json())
+			.then((json) => {
+				setContact(json.about);
+			});
+	}, []);
+
 	return (
 		<Layout title={'Contact'}>
 			<div className='upperBox'>
@@ -158,16 +168,27 @@ export default function Contact() {
 							<textarea name='message' className='msgEl' />
 						</div>
 
-						<div className='btnSet'>
-							<input type='reset' value='Cancel' />
-							<input type='submit' value='Send' />
+						<div className='btnPd'>
+							<div className='btnSet'>
+								<input type='reset' value='Cancel' />
+								<input type='submit' value='Send' />
+							</div>
 						</div>
 					</form>
 				</div>
 
 				<div id='etc'>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, id nesciunt? Dolores architecto quas voluptate dolorem impedit ab dolore, itaque
-					blanditiis iste esse delectus libero ipsum repudiandae porro nulla fuga.
+					{Contact.map((about, idx) => {
+						return (
+							<div className='txtSc'>
+								<article key={idx}>
+									<h2>{about.tit}</h2>
+									<p>{about.lorem}</p>
+									<span>{about.information}</span>
+								</article>
+							</div>
+						);
+					})}
 				</div>
 			</div>
 
@@ -199,6 +220,23 @@ export default function Contact() {
 						</li>
 					))}
 				</ul>
+			</div>
+			<div className='faqBox'>
+				<div className='faqtit'>
+					<p>FAQ</p>
+					<h1>Frequently Asked Questions</h1>
+				</div>
+				<div className='faqtxt'>
+					<h2>Lorem ipsum dolor sit amet.</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor expedita possimus consequatur. Ratione velit corrupti, quam praesentium veniam nulla
+						enim hic. Unde, atque.
+					</p>
+					<span className='t1'>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+					<span className='t2'>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+					<span className='t3'>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+					<span className='t4'>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+				</div>
 			</div>
 		</Layout>
 	);
