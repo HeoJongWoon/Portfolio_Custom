@@ -102,19 +102,19 @@ export default function Gallery() {
 			<Layout title={'Gallery'}>
 				<div className='aBox'>
 					<section className='topBox'>
+						<div className='searchBox'>
+							<form onSubmit={handleSubmit}>
+								<input ref={refInput} type='text' />
+								<button>SEARCH</button>
+							</form>
+						</div>
+
 						<div className='btnSet' ref={refBtnSet}>
 							<button className='on' onClick={handleClickMyGallery}>
 								My Gallery
 							</button>
 
 							<button onClick={handleClickInterest}>Interest Gallery</button>
-						</div>
-
-						<div className='searchBox'>
-							<form onSubmit={handleSubmit}>
-								<input ref={refInput} type='text' />
-								<button>SEARCH</button>
-							</form>
 						</div>
 					</section>
 
