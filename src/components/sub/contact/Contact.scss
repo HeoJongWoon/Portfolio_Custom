@@ -148,6 +148,7 @@
 					padding: 2%;
 					background: #eee;
 					font-weight: bold;
+					border-right: 1px solid #333;
 					cursor: pointer;
 
 					&:hover {
@@ -235,14 +236,14 @@
 				font-weight: bold;
 				padding-bottom: 2rem;
 			}
-
-			p {
+			span {
 				color: #888;
-				padding-bottom: 2rem;
 			}
 
-			span {
+			p {
 				color: #555;
+				padding-top: 2rem;
+				padding-bottom: 0.5rem;
 			}
 
 			.t1 {

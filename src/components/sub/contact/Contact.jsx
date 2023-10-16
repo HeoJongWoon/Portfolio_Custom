@@ -228,14 +228,14 @@ export default function Contact() {
 				</div>
 				<div className='faqtxt'>
 					<h2>Lorem ipsum dolor sit amet.</h2>
-					<p>
+					<span>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor expedita possimus consequatur. Ratione velit corrupti, quam praesentium veniam nulla
 						enim hic. Unde, atque.
-					</p>
-					<span className='t1'>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
-					<span className='t2'>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
-					<span className='t3'>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
-					<span className='t4'>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+					</span>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
 				</div>
 			</div>
 		</Layout>
