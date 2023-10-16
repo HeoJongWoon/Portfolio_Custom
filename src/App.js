@@ -2,6 +2,7 @@ import './styles/Global.scss';
 import './styles/Variable.scss';
 import { Route, Switch } from 'react-router-dom';
 import Header from './components/common/header/Header';
+import Footer from './components/common/footer/Footer';
 import Department from './components/sub/department/Department';
 import Youtube from './components/sub/youtube/Youtube';
 import Members from './components/sub/members/Members';
@@ -31,6 +32,7 @@ function App() {
 			<Route path='/contact' component={Contact} />
 			<Route path='/community' component={Community} />
 			<Route path='/detail/:id' component={Detail} />
+			<Route path='/' component={Footer} />
 		</>
 	);
 }

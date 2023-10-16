@@ -1,5 +1,14 @@
 .Community {
 	.content {
+		display: flex;
+		justify-content: space-between;
+		h1 {
+			font-size: 4rem;
+			padding-bottom: 1rem;
+		}
+		p {
+			width: 50%;
+		}
 		.inputBox {
 			width: 100%;
 			border: 1px solid #aaa;
