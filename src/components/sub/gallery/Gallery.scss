@@ -74,7 +74,7 @@
 					clear: both;
 				}
 				article {
-					width: 32%;
+					width: 33.333%;
 					padding: 10px;
 					float: left;
 
@@ -146,20 +146,38 @@
 	}
 }
 
-.tablet {
+.tablet,
+.mobile {
 	.Gallery {
-		.picFrame {
-			article {
-				width: 48%;
+		.content {
+			.aBox {
+				flex-wrap: wrap;
+				.topBox {
+					width: 100%;
+					margin-bottom: 50px;
+				}
+
+				.picFrame {
+					width: 100%;
+
+					article {
+						width: 50%;
+					}
+				}
 			}
 		}
 	}
 }
+
 .mobile {
 	.Gallery {
-		.picFrame {
-			article {
-				width: 100%;
+		.content {
+			.aBox {
+				.picFrame {
+					article {
+						width: 100%;
+					}
+				}
 			}
 		}
 	}
