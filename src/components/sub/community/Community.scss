@@ -1,81 +1,98 @@
 .Community {
 	.content {
-		.inputBox {
-			width: 100%;
-			border: 1px solid #aaa;
-			padding: 50px;
-			margin-bottom: 50px;
-
-			input[type='text'],
-			textarea {
-				width: 50%;
-				padding: 8px 10px;
+		.wrapBox {
+			display: flex;
+			justify-content: space-between;
+			.inputBox {
+				width: 30%;
 				border: 1px solid #aaa;
-				resize: none;
-				margin-bottom: 10px;
-				background: #fff;
-			}
+				padding: 50px;
+				margin-bottom: 50px;
 
-			.btnSet {
-				button {
-					width: 150px;
-					height: 30px;
-					display: inline-block;
-					border: none;
-					background: #555;
-					margin-right: 20px;
-					color: #e1d6c4;
-					cursor: pointer;
+				input[type='text'],
+				textarea {
+					width: 50%;
+					padding: 8px 10px;
+					border: 1px solid #aaa;
+					resize: none;
+					margin-bottom: 10px;
+					background: #fff;
+				}
+
+				.btnSet {
+					button {
+						width: 80px;
+						height: 30px;
+						display: inline-block;
+						border: none;
+						background: #555;
+						margin-right: 20px;
+						color: #e1d6c4;
+						cursor: pointer;
+					}
 				}
 			}
-		}
 
-		.showBox {
-			width: 100%;
-			border: 1px solid #aaa;
-			padding: 50px;
-
-			article {
-				background: #fff;
-				padding: 30px;
-				margin-bottom: 40px;
+			.showBox {
+				width: 60%;
 				display: flex;
 				justify-content: space-between;
-				align-content: center;
 				flex-wrap: wrap;
 
-				.txt {
-					width: 88%;
-					h2 {
-						margin-bottom: 10px;
-					}
-
-					input[type='text'],
-					textarea {
-						width: 50%;
-						padding: 8px 10px;
-						border: 1px solid #aaa;
-						resize: none;
-						margin-bottom: 10px;
-						background: #fff;
-					}
-				}
-				.btnSet {
-					width: 100%;
+				article {
+					width: 48%;
+					background: #fff;
+					padding: 20px;
+					margin-bottom: 10px;
 					display: flex;
-					gap: 20px;
-					align-items: center;
-					justify-content: flex-end;
+					justify-content: space-between;
+					align-content: center;
+					flex-wrap: wrap;
 
-					button {
-						border: none;
-						background: transparent;
-						cursor: pointer;
-						&:nth-of-type(1) {
-							color: orange;
+					&:nth-of-type(1) {
+						width: 100%;
+					}
+					&:nth-of-type(2) {
+						width: 100%;
+					}
+					&:nth-of-type(3) {
+						width: 100%;
+						margin-bottom: 3rem;
+					}
+
+					.txt {
+						width: 88%;
+						h2 {
+							margin-bottom: 10px;
 						}
-						&:nth-of-type(2) {
-							color: orangered;
+
+						input[type='text'],
+						textarea {
+							width: 50%;
+							padding: 8px 10px;
+							border: 1px solid #aaa;
+							resize: none;
+							margin-bottom: 10px;
+							background: #fff;
+						}
+					}
+					.btnSet {
+						width: 100%;
+						display: flex;
+						gap: 20px;
+						align-items: center;
+						justify-content: flex-end;
+
+						button {
+							border: none;
+							background: transparent;
+							cursor: pointer;
+							&:nth-of-type(1) {
+								color: #1d1d1d;
+							}
+							&:nth-of-type(2) {
+								color: orangered;
+							}
 						}
 					}
 				}

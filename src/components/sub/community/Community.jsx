@@ -95,74 +95,76 @@ export default function Community() {
 
 	return (
 		<Layout title={'Community'}>
-			<div className='inputBox'>
-				<input ref={refInput} type='text' placeholder='제목을 입력하세요.' />
-				<br />
-				<textarea ref={refTextarea} cols='30' rows='3' placeholder='본문을 입력하세요.'></textarea>
+			<div className='wrapBox'>
+				<div className='inputBox'>
+					<input ref={refInput} type='text' placeholder='제목을 입력하세요.' />
+					<br />
+					<textarea ref={refTextarea} cols='30' rows='3' placeholder='본문을 입력하세요.'></textarea>
 
-				<nav className='btnSet'>
-					<button onClick={resetForm}>cancel</button>
-					<button onClick={createPost}>write</button>
-				</nav>
-			</div>
+					<nav className='btnSet'>
+						<button onClick={resetForm}>cancel</button>
+						<button onClick={createPost}>write</button>
+					</nav>
+				</div>
 
-			<div className='showBox'>
-				{Posts.map((post, idx) => {
-					const string = JSON.stringify(post.data);
+				<div className='showBox'>
+					{Posts.map((post, idx) => {
+						const string = JSON.stringify(post.data);
 
-					const [year, month, date] = string.split('T')[0].split('"')[1].split('-');
+						const [year, month, date] = string.split('T')[0].split('"')[1].split('-');
 
-					let [hour, min, sec] = string.split('T')[1].split('.')[0].split(':');
-					hour = parseInt(hour) + 9;
-					hour >= 24 && (hour = hour - 24);
+						let [hour, min, sec] = string.split('T')[1].split('.')[0].split(':');
+						hour = parseInt(hour) + 9;
+						hour >= 24 && (hour = hour - 24);
 
-					if (post.enableUpdate) {
-						//수정 모드 렌더링
-						return (
-							<article key={idx}>
-								<div className='txt'>
-									<input type='text' defaultValue={post.title} ref={refEditInput} />
-									<br />
-									<textarea
-										//react에서 value속성을 적용하려면 무조건 onChange이벤트 연결 필수
-										//onChange이벤트 연결하지 않을때에는 value가닌 defaultValue속성 적용
-										defaultValue={post.content}
-										ref={refEditTextarea}
-									/>
-								</div>
-								<nav className='btnSet'>
-									<button onClick={() => disableUpdate(idx)}>Cancel</button>
-									<button
-										onClick={() => {
-											updatePost(idx);
-											disableUpdate(idx);
-										}}
-									>
-										Update
-									</button>
-								</nav>
-							</article>
-						);
-					} else {
-						//출력 모드 렌더링
+						if (post.enableUpdate) {
+							//수정 모드 렌더링
+							return (
+								<article key={idx}>
+									<div className='txt'>
+										<input type='text' defaultValue={post.title} ref={refEditInput} />
+										<br />
+										<textarea
+											//react에서 value속성을 적용하려면 무조건 onChange이벤트 연결 필수
+											//onChange이벤트 연결하지 않을때에는 value가닌 defaultValue속성 적용
+											defaultValue={post.content}
+											ref={refEditTextarea}
+										/>
+									</div>
+									<nav className='btnSet'>
+										<button onClick={() => disableUpdate(idx)}>Cancel</button>
+										<button
+											onClick={() => {
+												updatePost(idx);
+												disableUpdate(idx);
+											}}
+										>
+											Update
+										</button>
+									</nav>
+								</article>
+							);
+						} else {
+							//출력 모드 렌더링
 
-						return (
-							<article key={idx}>
-								<div className='txt'>
-									<h2>{post.title}</h2>
-									<p>{post.content}</p>
-									<p>{`글 작성일 : ${year}-${month}-${date}`}</p>
-									<p>{`글 작성시간 : ${hour}:${min}:${sec}`}</p>
-								</div>
+							return (
+								<article key={idx}>
+									<div className='txt'>
+										<h2>{post.title}</h2>
+										<p>{post.content}</p>
+										<p>{`글 작성일 : ${year}-${month}-${date}`}</p>
+										<p>{`글 작성시간 : ${hour}:${min}:${sec}`}</p>
+									</div>
 
-								<nav className='btnSet'>
-									<button onClick={() => enableUpdate(idx)}>Edit</button>
-									<button onClick={() => deletePost(idx)}>Delete</button>
-								</nav>
-							</article>
-						);
-					}
-				})}
+									<nav className='btnSet'>
+										<button onClick={() => enableUpdate(idx)}>Edit</button>
+										<button onClick={() => deletePost(idx)}>Delete</button>
+									</nav>
+								</article>
+							);
+						}
+					})}
+				</div>
 			</div>
 		</Layout>
 	);
