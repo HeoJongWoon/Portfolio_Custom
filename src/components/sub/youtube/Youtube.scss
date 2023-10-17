@@ -45,9 +45,6 @@
 					}
 				}
 
-				.blackBox {
-					width: 1%;
-				}
 				.titBox {
 					width: 30%;
 					font: 1.5rem 'Noto Sans', sans-serif;
@@ -77,6 +74,57 @@
 						position: absolute;
 						top: 0;
 						transform: scale(1.5);
+					}
+				}
+			}
+		}
+	}
+}
+
+.tablet,
+.mobile {
+	.Youtube {
+		.content {
+			.box {
+				flex-wrap: wrap;
+				&:nth-of-type(even) {
+					.innerBox {
+						flex-direction: row;
+
+						.picBox {
+							transform: translateX(0%);
+						}
+					}
+				}
+				.innerBox {
+					flex-wrap: wrap;
+					.titBox {
+						width: 48%;
+					}
+					.conBox {
+						width: 48%;
+					}
+					.picBox {
+						width: 100%;
+						margin-top: 40px;
+						transform: translateX(0%);
+					}
+				}
+			}
+		}
+	}
+}
+
+.mobile {
+	.Youtube {
+		.content {
+			.box {
+				.innerBox {
+					.titBox {
+						width: 100%;
+					}
+					.conBox {
+						width: 100%;
 					}
 				}
 			}
