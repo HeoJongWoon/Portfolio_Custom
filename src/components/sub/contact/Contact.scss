@@ -2,11 +2,7 @@
 	.content {
 		width: 70vw;
 		h1 {
-			width: 70vw;
-			margin: 0px auto;
 			padding-bottom: 3rem;
-			text-align: left;
-			position: relative;
 		}
 
 		.upperBox {
@@ -253,6 +249,52 @@
 
 			.t1 {
 				padding-bottom: 1rem;
+			}
+		}
+	}
+}
+
+.tablet,
+.mobile {
+	.Contact {
+		.content {
+			.upperBox {
+				flex-wrap: wrap;
+				#mailbox {
+					width: 100%;
+
+					form {
+						border: none;
+						padding-right: 0px;
+					}
+				}
+
+				#etc {
+					width: 100%;
+				}
+			}
+
+			#mapBox {
+				.btnAll {
+					flex-wrap: wrap;
+					.btnSet {
+						width: 100%;
+					}
+					ul {
+						width: 100%;
+						border: none;
+					}
+				}
+			}
+		}
+
+		.faqBox {
+			flex-wrap: wrap;
+			.faqtit {
+				width: 100%;
+			}
+			.faqtxt {
+				width: 100%;
 			}
 		}
 	}
