@@ -62,10 +62,6 @@
 							background: #f3eee8;
 						}
 					}
-					// h1 {
-					// 	padding-top: 8rem;
-					// 	color: black;
-					// }
 				}
 			}
 
@@ -78,7 +74,7 @@
 					clear: both;
 				}
 				article {
-					width: 33.333%;
+					width: 32%;
 					padding: 10px;
 					float: left;
 
@@ -145,6 +141,25 @@
 						}
 					}
 				}
+			}
+		}
+	}
+}
+
+.tablet {
+	.Gallery {
+		.picFrame {
+			article {
+				width: 48%;
+			}
+		}
+	}
+}
+.mobile {
+	.Gallery {
+		.picFrame {
+			article {
+				width: 100%;
 			}
 		}
 	}

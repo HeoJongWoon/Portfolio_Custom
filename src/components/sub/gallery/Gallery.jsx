@@ -120,7 +120,6 @@ export default function Gallery() {
 									- Interest Gallery
 								</button>
 							</div>
-							{/* <h1>Tait.</h1> */}
 						</div>
 					</section>
 
