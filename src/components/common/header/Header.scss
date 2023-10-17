@@ -1,15 +1,13 @@
-@import '/src/styles/Variable.scss';
-
 .header {
 	width: 100%;
 	padding: 3vh 10vw;
 	display: flex;
 	justify-content: space-between;
-	background: linear-gradient(180deg, #000, #999);
+	background: linear-gradient(90deg, #1d1d1d, #555);
 
 	h1 {
 		font-size: 1.5rem;
-		color: #fff;
+		color: #e1d6c4;
 	}
 
 	ul {
@@ -17,12 +15,12 @@
 		gap: 4vw;
 		align-items: center;
 		font-size: 1rem;
-		color: #fff;
+		color: #9d958a;
 
 		li {
 			a.active {
-				color: hotpink;
 				font-weight: bold;
+				color: #e1d6c4;
 			}
 
 			&:hover {
@@ -44,7 +42,7 @@
 	}
 }
 
-@media screen and (max-width: $tablet) {
+.mobile {
 	.header {
 		ul {
 			display: none;

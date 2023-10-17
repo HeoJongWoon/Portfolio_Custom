@@ -193,33 +193,34 @@ export default function Contact() {
 			</div>
 
 			<div id='mapBox'>
-				<div className='btnSet'>
-					<button onClick={() => setTraffic(!Traffic)}>{Traffic ? '교통정보 끄기' : '교통정보 켜기'}</button>
+				<div className='btnAll'>
+					<div className='btnSet'>
+						<button onClick={() => setTraffic(!Traffic)}>{Traffic ? '교통정보 끄기' : '교통정보 켜기'}</button>
 
-					<button onClick={setCenter}>지도 위치 초기화</button>
-					<button onClick={() => setIsMap(!IsMap)}>{IsMap ? '로드뷰보기' : '지도보기'}</button>
+						<button onClick={setCenter}>지도 위치 초기화</button>
+						<button onClick={() => setIsMap(!IsMap)}>{IsMap ? '로드뷰보기' : '지도보기'}</button>
+					</div>
+					<ul>
+						{info.current.map((el, idx) => (
+							<li
+								className={Index === idx ? 'on' : ''}
+								key={idx}
+								onClick={() => {
+									setIndex(idx);
+									setIsMap(true);
+								}}
+							>
+								{el.title}
+							</li>
+						))}
+					</ul>
 				</div>
-
 				<div className='container'>
 					<div className={`view ${IsMap ? '' : 'on'}`} ref={view}></div>
 					<div className={`map ${IsMap ? 'on' : ''}`} ref={map}></div>
 				</div>
 
 				{/* 데이터기반으로 자동 버튼 생성 및 자동 이벤트 연결 처리 */}
-				<ul>
-					{info.current.map((el, idx) => (
-						<li
-							className={Index === idx ? 'on' : ''}
-							key={idx}
-							onClick={() => {
-								setIndex(idx);
-								setIsMap(true);
-							}}
-						>
-							{el.title}
-						</li>
-					))}
-				</ul>
 			</div>
 			<div className='faqBox'>
 				<div className='faqtit'>

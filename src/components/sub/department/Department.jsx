@@ -7,7 +7,7 @@ const path = process.env.PUBLIC_URL;
 //3.return문 안족에 state값을 map으로 반복돌면서 JSX출력
 
 export default function Department() {
-	const refSliderWrap = useRef(null);
+	// const refSliderWrap = useRef(null);
 	const [Department, setDepartment] = useState([]);
 	const [Subpage, setSubpage] = useState([]);
 

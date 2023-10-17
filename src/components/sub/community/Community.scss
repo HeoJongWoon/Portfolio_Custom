@@ -1,14 +1,5 @@
 .Community {
 	.content {
-		display: flex;
-		justify-content: space-between;
-		h1 {
-			font-size: 4rem;
-			padding-bottom: 1rem;
-		}
-		p {
-			width: 50%;
-		}
 		.inputBox {
 			width: 100%;
 			border: 1px solid #aaa;
@@ -22,7 +13,7 @@
 				border: 1px solid #aaa;
 				resize: none;
 				margin-bottom: 10px;
-				background: #f0fdff;
+				background: #fff;
 			}
 
 			.btnSet {
@@ -33,7 +24,7 @@
 					border: none;
 					background: #555;
 					margin-right: 20px;
-					color: #fff;
+					color: #e1d6c4;
 					cursor: pointer;
 				}
 			}
@@ -66,7 +57,7 @@
 						border: 1px solid #aaa;
 						resize: none;
 						margin-bottom: 10px;
-						background: #f0fdff;
+						background: #fff;
 					}
 				}
 				.btnSet {
