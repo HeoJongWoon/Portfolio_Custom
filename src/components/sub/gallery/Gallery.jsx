@@ -109,12 +109,18 @@ export default function Gallery() {
 							</form>
 						</div>
 
-						<div className='btnSet' ref={refBtnSet}>
-							<button className='on' onClick={handleClickMyGallery}>
-								My Gallery
-							</button>
+						<div className='buttonWrap'>
+							<p>FILTER</p>
+							<div className='btnSet' ref={refBtnSet}>
+								<button className='my' onClick={handleClickMyGallery}>
+									- My Gallery
+								</button>
 
-							<button onClick={handleClickInterest}>Interest Gallery</button>
+								<button className='it' onClick={handleClickInterest}>
+									- Interest Gallery
+								</button>
+							</div>
+							{/* <h1>Tait.</h1> */}
 						</div>
 					</section>
 

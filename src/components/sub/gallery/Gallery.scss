@@ -9,10 +9,9 @@
 		justify-content: space-between;
 
 		.topBox {
-			width: 20%;
+			width: 25%;
 			display: flex;
 			flex-wrap: wrap;
-			margin-bottom: 20px;
 			padding: 10px;
 			align-content: flex-start;
 
@@ -21,21 +20,52 @@
 				text-align: left;
 				display: flex;
 				justify-content: space-between;
+				padding-bottom: 2rem;
 
 				input {
 					width: 60%;
 				}
 				button {
 					width: 35%;
+					background-color: #1d1d1d;
+					color: #e1d6c4;
 				}
 			}
-
-			.btnSet {
-				width: 100%;
-
-				.on {
-					color: #555;
+			.buttonWrap {
+				p {
+					font-weight: bold;
 				}
+				.btnSet {
+					width: 100%;
+
+					button {
+						&.on {
+							font-weight: bold;
+							color: black;
+						}
+					}
+					.my {
+						color: #888;
+						border: none;
+						width: 100%;
+						text-align: left;
+						padding-left: 0.5rem;
+						background: #f3eee8;
+					}
+
+					.it {
+						color: #888;
+						border: none;
+						width: 100%;
+						text-align: left;
+						padding-left: 0.5rem;
+						background: #f3eee8;
+					}
+				}
+				// h1 {
+				// 	padding-top: 8rem;
+				// 	color: black;
+				// }
 			}
 		}
 
