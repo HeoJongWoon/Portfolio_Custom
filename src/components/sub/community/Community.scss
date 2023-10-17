@@ -104,3 +104,39 @@
 		}
 	}
 }
+
+.tablet,
+.mobile {
+	.Community {
+		.content {
+			.wrapBox {
+				flex-wrap: wrap;
+				.inputBox {
+					width: 100%;
+				}
+
+				.showBox {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.mobile {
+	.Community {
+		.content {
+			.wrapBox {
+				.showBox {
+					article {
+						width: 100%;
+
+						&:nth-of-type(3) {
+							margin-bottom: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
