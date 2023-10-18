@@ -1,3 +1,5 @@
+// Layout.jsx를 왜 만들었는지 설명
+
 import './Layout.scss';
 
 export default function Layout({ title, children }) {
