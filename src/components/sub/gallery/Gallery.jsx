@@ -15,6 +15,7 @@ export default function Gallery() {
 	const refBtnSet = useRef(null);
 	const [ActiveURL, setActiveURL] = useState('');
 	const [IsUser, setIsUser] = useState(true);
+	const [IsFilter, setIsFilter] = useState(false);
 	const my_id = '199283169@N04';
 
 	//submit이벤트 발생시 실행할 함수
@@ -75,19 +76,20 @@ export default function Gallery() {
 								<button>SEARCH</button>
 							</form>
 						</div>
+						<span onClick={() => setIsFilter(!IsFilter)}>FILTER</span>
+						{IsFilter && (
+							<div className='buttonWrap'>
+								<div className='btnSet' ref={refBtnSet}>
+									<button className='my' onClick={handleClickMy}>
+										- My Gallery
+									</button>
 
-						<div className='buttonWrap'>
-							<p>FILTER</p>
-							<div className='btnSet' ref={refBtnSet}>
-								<button className='my' onClick={handleClickMy}>
-									- My Gallery
-								</button>
-
-								<button className='it' onClick={handleClickInterest}>
-									- Interest Gallery
-								</button>
+									<button className='it' onClick={handleClickInterest}>
+										- Interest Gallery
+									</button>
+								</div>
 							</div>
-						</div>
+						)}
 					</section>
 
 					<div className='picFrame'>
