@@ -8,7 +8,6 @@ export const useMedia = (opt) => {
 	console.log(result);
 	const [Type, setType] = useState('');
 
-	//합쳐진 미디어쿼리 수치값과 현재 브라우저 넓이값을 비교해서 Type의 문자값을 변경해주는 함수
 	const getClientWid = () => {
 		let wid = window.innerWidth;
 		if (wid >= result.laptop) setType('');
@@ -17,8 +16,6 @@ export const useMedia = (opt) => {
 		if (wid >= 0 && wid < result.mobile) setType('mobile');
 	};
 
-	//처음로딩시 해당함수 호출하고
-	//브라우저리사이즈 될때마다 getClientWid가 변경해주는 Type문자값을 리턴
 	useEffect(() => {
 		getClientWid();
 		window.addEventListener('resize', getClientWid);

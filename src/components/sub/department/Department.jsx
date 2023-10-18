@@ -1,5 +1,5 @@
 import Layout from '../../common/layout/Layout';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import './Department.scss';
 const path = process.env.PUBLIC_URL;
 //1.useEffect로 컴포넌트 마운트되자마자 fetch외부데이터 가져옴
