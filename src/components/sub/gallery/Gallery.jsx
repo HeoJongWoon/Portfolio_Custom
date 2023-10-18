@@ -80,7 +80,7 @@ export default function Gallery() {
 						{IsFilter && (
 							<div className='buttonWrap'>
 								<div className='btnSet' ref={refBtnSet}>
-									<button className='my' onClick={handleClickMy}>
+									<button className='my on' onClick={handleClickMy}>
 										- My Gallery
 									</button>
 
