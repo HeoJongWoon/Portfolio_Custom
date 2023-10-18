@@ -1,8 +1,8 @@
 import './styles/Global.scss';
 
 import { Route, Switch } from 'react-router-dom';
-import Footer from './components/common/footer/Footer';
 import Header from './components/common/header/Header';
+import Footer from './components/common/footer/Footer';
 import Department from './components/sub/department/Department';
 import Youtube from './components/sub/youtube/Youtube';
 import Members from './components/sub/members/Members';
@@ -15,12 +15,11 @@ import { useMedia } from './hooks/useMedia';
 import { useEffect } from 'react';
 import { fetchYoutube } from './redux/youtubeSlice';
 import { fetchFlickr } from './redux/flickrSlice';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Menu from './components/common/menu/Menu';
 
 function App() {
 	const dispatch = useDispatch();
-	const { isOpen } = useSelector((store) => store.menu);
 
 	useEffect(() => {
 		dispatch(fetchYoutube());
@@ -46,7 +45,7 @@ function App() {
 			<Route path='/community' component={Community} />
 			<Route path='/detail/:id' component={Detail} />
 			<Route path='/' component={Footer} />
-			{isOpen && <Menu />}
+			<Menu />
 		</main>
 	);
 }
