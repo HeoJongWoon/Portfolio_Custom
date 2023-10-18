@@ -1,109 +1,110 @@
 .Members {
-	.content {
-		table {
-			width: 100%;
-			border: none;
-			border-top: 2px solid #333;
-			border-bottom: 2px solid #333;
+	.allForm {
+		width: 100%;
+		height: 800px;
+		transition: 0.5s;
 
-			th {
-				width: 20%;
-				border: none;
-				border-bottom: 1px solid #bbb;
-				padding: 15px 30px;
-				text-align: left;
-				&:last-child {
-					text-align: center;
-					input[type='submit'],
-					input[type='reset'] {
-						border: 1px solid #aaa;
-						width: 150px;
-						height: 30px;
-						display: inline-flex;
-						justify-content: center;
-						align-items: center;
-						margin: 0px 10px;
-						cursor: pointer;
-					}
-				}
-			}
-			td {
-				border: none;
-				border-bottom: 1px solid #bbb;
-				border-left: 1px solid #bbb;
-				padding: 15px 30px;
+		&:hover {
+			transform: scale(1.02);
+			box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+		}
 
-				input[type='text'],
-				input[type='password'],
-				textarea,
-				select {
-					width: 40%;
-					border: 1px solid #aaa;
-					padding: 6px 10px;
-					background: #fff;
-					resize: none;
+		.Form {
+			width: 50%;
+			height: 100%;
+			float: left;
+			padding: 20px;
+			background-color: white;
+
+			.descc {
+				padding-top: 20px;
+				text-align: center;
+				height: 100px;
+
+				h3 {
+					font-size: 35px;
 				}
-				input[type='checkbox'],
-				input[type='radio'] {
-					margin-right: 20px;
-					margin-left: 5px;
-				}
+
 				p {
-					font: 0.8rem/1.2 '돋움';
-					color: hotpink;
-					margin-top: 5px;
+					font-size: 15px;
+					color: gray;
 				}
 			}
-		}
-	}
-}
 
-//tablet mediaquery
-.tablet,
-.mobile {
-	.Members {
-		.content {
 			table {
-				td {
-					input[type='text'],
-					input[type='password'],
-					textarea,
-					select {
-						width: 100%;
-					}
-				}
-			}
-		}
-	}
-}
+				width: 100%;
+				border: none;
 
-//tablet mediaquery
-.mobile {
-	.Members {
-		.content {
-			table {
 				th {
-					display: none;
+					width: 20%;
+					border: none;
+					padding: 15px 30px;
+					text-align: left;
 					&:last-child {
-						display: block;
-						width: 100%;
-
-						input {
-							width: 40%;
+						text-align: center;
+						input[type='submit'],
+						input[type='reset'] {
+							width: 150px;
+							height: 30px;
+							display: inline-flex;
+							justify-content: center;
+							align-items: center;
+							margin: 0px 10px;
+							cursor: pointer;
 						}
 					}
 				}
 				td {
-					width: 100%;
-					border-left: none;
-					padding: 20px 0px;
+					border: none;
+					padding: 15px 30px;
 
 					input[type='text'],
 					input[type='password'],
-					textarea,
 					select {
 						width: 100%;
+						height: 40px;
+						border: none;
+						padding: 10px;
+						background: rgb(238, 238, 238);
+						resize: none;
 					}
+					textarea {
+						width: 100%;
+						height: 100px;
+						border: none;
+						padding: 6px 10px;
+						background: rgb(238, 238, 238);
+						resize: none;
+					}
+					input[type='checkbox'],
+					input[type='radio'] {
+						margin-right: 20px;
+						margin-left: 5px;
+					}
+					p {
+						font: 0.8rem/1.2 '돋움';
+						color: hotpink;
+						margin-top: 5px;
+					}
+				}
+			}
+		}
+
+		.rightBox {
+			width: 50%;
+			height: 100%;
+			float: right;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			background-color: #fff;
+			padding-top: 350px;
+
+			.menu {
+				h3 {
+				}
+				p {
+					color: #888;
 				}
 			}
 		}

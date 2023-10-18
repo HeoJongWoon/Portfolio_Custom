@@ -22,7 +22,12 @@ export default function Members() {
 	const resetForm = (e) => {
 		e.preventDefault();
 		setVal(initVal);
-
+		/*
+		const checks = refCheckGroup.current.querySelectorAll('input');
+		const radios = refRadioGroup.current.querySelectorAll('input');
+		checks.forEach((input) => (input.checked = false));
+		radios.forEach((input) => (input.checked = false));
+    */
 		[refCheckGroup, refRadioGroup].forEach((el) => el.current.querySelectorAll('input').forEach((input) => (input.checked = false)));
 		refSelGroup.current.value = '';
 	};
@@ -113,131 +118,151 @@ export default function Members() {
 
 	return (
 		<Layout title={'Members'}>
-			<form onSubmit={handleSubmit}>
-				<fieldset>
-					<legend className='h'>회원가입 폼 양식</legend>
-					<table border='1'>
-						<tbody>
-							{/* userid */}
-							<tr>
-								<th scope='row'>
-									<label htmlFor='userid'>Userid</label>
-								</th>
-								<td>
-									<input type='text' id='userid' name='userid' value={Val.userid} onChange={handleChange} placeholder='아이디를 입력하세요.' />
-									{Errs.userid && <p>{Errs.userid}</p>}
-								</td>
-							</tr>
+			<div className='allForm'>
+				<div className='Form'>
+					<form onSubmit={handleSubmit}>
+						<fieldset>
+							<div className='descc'>
+								<h3>Sign up</h3>
+							</div>
+							<table border='1'>
+								<tbody>
+									{/* userid */}
+									<tr>
+										<td>
+											<input type='text' placeholder='ID' id='userid' name='userid' value={Val.userid} onChange={handleChange} />
+											{Errs.userid && <p>{Errs.userid}</p>}
+										</td>
+									</tr>
 
-							{/* password */}
-							<tr>
-								<th scope='row'>
-									<label htmlFor='pwd1'>Password</label>
-								</th>
-								<td>
-									<input type='password' id='pwd1' name='pwd1' value={Val.pwd1} onChange={handleChange} placeholder='비밀번호를 입력하세요.' />
-									{Errs.pwd1 && <p>{Errs.pwd1}</p>}
-								</td>
-							</tr>
+									{/* password */}
+									<tr>
+										<td>
+											<input type='password' placeholder='Password' id='pwd1' name='pwd1' value={Val.pwd1} onChange={handleChange} />
+											{Errs.pwd1 && <p>{Errs.pwd1}</p>}
+										</td>
+									</tr>
 
-							{/* re password */}
-							<tr>
-								<th scope='row'>
-									<label htmlFor='pwd2'>Re-Password</label>
-								</th>
-								<td>
-									<input type='password' id='pwd2' name='pwd2' value={Val.pwd2} onChange={handleChange} placeholder='비밀번호를 재입력하세요.' />
-									{Errs.pwd2 && <p>{Errs.pwd2}</p>}
-								</td>
-							</tr>
+									{/* re password */}
+									<tr>
+										<td>
+											<input type='password' placeholder='Confirm Password' id='pwd2' name='pwd2' value={Val.pwd2} onChange={handleChange} />
+											{Errs.pwd2 && <p>{Errs.pwd2}</p>}
+										</td>
+									</tr>
 
-							{/* email */}
-							<tr>
-								<th scope='row'>
-									<label htmlFor='email'>E-mail</label>
-								</th>
-								<td>
-									<input type='text' id='email' name='email' value={Val.email} onChange={handleChange} placeholder='이메일주소를 입력하세요.' />
-									{Errs.email && <p>{Errs.email}</p>}
-								</td>
-							</tr>
+									{/* email */}
+									<tr>
+										<td>
+											<input type='text' placeholder='Email' id='email' name='email' value={Val.email} onChange={handleChange} />
+											{Errs.email && <p>{Errs.email}</p>}
+										</td>
+									</tr>
 
-							{/* gender */}
-							<tr>
-								<th>Gender</th>
-								<td ref={refRadioGroup}>
-									<label htmlFor='female'>female</label>
-									<input type='radio' name='gender' id='female' onChange={handleRadio} />
+									{/* gender */}
+									<tr>
+										<td ref={refRadioGroup}>
+											<label htmlFor='female'>Female</label>
+											<input type='radio' name='gender' id='female' onChange={handleRadio} />
 
-									<label htmlFor='male'>male</label>
-									<input type='radio' name='gender' id='male' onChange={handleRadio} />
-									{Errs.gender && <p>{Errs.gender}</p>}
-								</td>
-							</tr>
+											<label htmlFor='male'>Male</label>
+											<input type='radio' name='gender' id='male' onChange={handleRadio} />
+											{Errs.gender && <p>{Errs.gender}</p>}
+										</td>
+									</tr>
 
-							{/* interests */}
-							<tr>
-								<th>Interests</th>
-								<td ref={refCheckGroup}>
-									<label htmlFor='sports'>sports</label>
-									<input type='checkbox' id='sports' name='interests' onChange={handleCheck} />
+									{/* interests */}
+									<tr>
+										<td ref={refCheckGroup}>
+											<label htmlFor='sports'>Sports</label>
+											<input type='checkbox' id='sports' name='interests' onChange={handleCheck} />
 
-									<label htmlFor='game'>game</label>
-									<input type='checkbox' id='game' name='interests' onChange={handleCheck} />
+											<label htmlFor='game'>Game</label>
+											<input type='checkbox' id='game' name='interests' onChange={handleCheck} />
 
-									<label htmlFor='music'>music</label>
-									<input type='checkbox' id='music' name='interests' onChange={handleCheck} />
-									{Errs.interests && <p>{Errs.interests}</p>}
-								</td>
-							</tr>
+											<label htmlFor='music'>Music</label>
+											<input type='checkbox' id='music' name='interests' onChange={handleCheck} />
+											{Errs.interests && <p>{Errs.interests}</p>}
+										</td>
+									</tr>
 
-							{/* education */}
-							<tr>
-								<th>
-									<label htmlFor='edu'>Education</label>
-								</th>
-								<td>
-									<select name='edu' id='edu' onChange={handleChange} ref={refSelGroup}>
-										<option value=''>최종학력 선택하세요</option>
-										<option value='elementary-school'>초등학교 졸업</option>
-										<option value='middle-school'>중학교 졸업</option>
-										<option value='high-school'>고등학교 졸업</option>
-										<option value='college'>대학교 졸업</option>
-									</select>
-									{Errs.edu && <p>{Errs.edu}</p>}
-								</td>
-							</tr>
+									{/* education */}
+									<tr>
+										<td>
+											<select name='edu' id='edu' onChange={handleChange} ref={refSelGroup}>
+												<option value=''>최종학력 선택하세요</option>
+												<option value='elementary-school'>초등학교 졸업</option>
+												<option value='middle-school'>중학교 졸업</option>
+												<option value='high-school'>고등학교 졸업</option>
+												<option value='college'>대학교 졸업</option>
+											</select>
+											{Errs.edu && <p>{Errs.edu}</p>}
+										</td>
+									</tr>
 
-							{/* comments */}
-							<tr>
-								<th>
-									<label htmlFor='comments'>Comments</label>
-								</th>
-								<td>
-									<textarea
-										name='comments'
-										id=''
-										cols='30'
-										rows='3'
-										value={Val.comments}
-										onChange={handleChange}
-										placeholder='남기는 말을 입력하세요.'
-									></textarea>
-									{Errs.comments && <p>{Errs.comments}</p>}
-								</td>
-							</tr>
+									{/* comments */}
+									<tr>
+										<td>
+											<textarea
+												name='comments'
+												placeholder='Enter your comment here!'
+												id=''
+												cols='30'
+												rows='3'
+												value={Val.comments}
+												onChange={handleChange}
+											></textarea>
+											{Errs.comments && <p>{Errs.comments}</p>}
+										</td>
+									</tr>
 
-							{/* btnSet */}
-							<tr>
-								<th colSpan='2'>
-									<input type='reset' value='cancel' onClick={resetForm} />
-									<input type='submit' value='send' />
-								</th>
-							</tr>
-						</tbody>
-					</table>
-				</fieldset>
-			</form>
+									{/* btnSet */}
+									<tr>
+										<th colSpan='2'>
+											<input type='reset' value='cancel' onClick={resetForm} />
+											<input type='submit' value='send' />
+										</th>
+									</tr>
+								</tbody>
+							</table>
+						</fieldset>
+					</form>
+				</div>
+				<div className='rightBox'>
+					<div className='menu'>
+						<ul>
+							<li>
+								<h3>Contact us</h3>
+							</li>
+
+							<li>
+								<p>ADDRESS</p>
+							</li>
+							<li>
+								<p>The Office Group</p>
+							</li>
+							<li>
+								<p>91 Wimpole Street</p>
+							</li>
+							<li>
+								<p>London</p>
+							</li>
+							<li>
+								<p>W1G oEF</p>
+							</li>
+							<li>
+								<p>United Kingdem</p>
+							</li>
+							<li>
+								<p>EMAIL</p>
+							</li>
+							<li>
+								<p>whddns0902@gmail.com</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</Layout>
 	);
 }
