@@ -1,210 +1,208 @@
 .Contact {
-	.content {
-		width: 70vw;
-		h1 {
-			padding-bottom: 3rem;
-		}
+	width: 70vw;
+	h1 {
+		padding-bottom: 3rem;
+	}
 
-		.upperBox {
-			width: 100%;
-			margin: 0px auto;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			padding-bottom: 5rem;
+	.upperBox {
+		width: 100%;
+		margin: 0px auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding-bottom: 5rem;
 
-			#mailbox {
-				width: 60%;
+		#mailbox {
+			width: 60%;
 
-				form {
-					border-right: 1px solid #ddd;
-					padding-right: 30px;
-					.texBox {
-						h2 {
-							text-align: left;
-							color: #333;
-							padding-bottom: 0.5rem;
-						}
-						p {
-							text-align: left;
-							color: #888;
-						}
+			form {
+				border-right: 1px solid #ddd;
+				padding-right: 30px;
+				.texBox {
+					h2 {
+						text-align: left;
+						color: #333;
+						padding-bottom: 0.5rem;
 					}
-					.upper {
-						// width: 50%;
-						margin-bottom: 10px;
-						display: flex;
-						flex-wrap: wrap;
-						margin-bottom: 20px;
-						width: 60%;
+					p {
+						text-align: left;
+						color: #888;
+					}
+				}
+				.upper {
+					// width: 50%;
+					margin-bottom: 10px;
+					display: flex;
+					flex-wrap: wrap;
+					margin-bottom: 20px;
+					width: 60%;
 
-						label {
-							font: bold 1rem/1 'arial';
-							color: #555;
-							margin-right: 10px;
-							position: relative;
-							top: 10px;
-						}
-
-						input[type='text'],
-						input[type='email'] {
-							display: block;
-							width: 100%;
-							border: none;
-							padding: 10px 20px;
-							border-bottom: 1px solid #555;
-							margin-right: 50px;
-							outline: none;
-							background: none;
-						}
+					label {
+						font: bold 1rem/1 'arial';
+						color: #555;
+						margin-right: 10px;
+						position: relative;
+						top: 10px;
 					}
 
-					.lower {
+					input[type='text'],
+					input[type='email'] {
+						display: block;
 						width: 100%;
-						margin-bottom: 10px;
-						display: flex;
-						flex-wrap: wrap;
-						margin-bottom: 20px;
-						label {
-							font: bold 1rem/1 'arial';
-							color: #555;
-							margin-right: 10px;
-							position: relative;
-							top: -10px;
-						}
-						textarea {
-							width: 100%;
-							border: none;
-							border-bottom: 1px solid #555;
-							margin-right: 20px;
-							outline: none;
-							background: none;
-							resize: none;
-						}
-					}
-
-					.btnPd {
-						padding-right: 1.2rem;
-						.btnSet {
-							width: 100%;
-
-							display: flex;
-							gap: 10px;
-							justify-content: flex-end;
-							margin-bottom: 20px;
-
-							input {
-								width: 100px;
-								display: block;
-								height: 40px;
-								background: #444;
-								border: 1px solid #666;
-								font: 1rem/40px 'arial';
-								color: #f3eee8;
-								text-align: center;
-								cursor: pointer;
-							}
-						}
-					}
-					.texBox {
-						margin-top: 20px;
-						text-align: center;
-						margin-bottom: 20px;
+						border: none;
+						padding: 10px 20px;
+						border-bottom: 1px solid #555;
+						margin-right: 50px;
+						outline: none;
+						background: none;
 					}
 				}
-			}
 
-			#etc {
-				width: 40%;
-				height: 379px;
-				padding-top: 19px;
-				padding-left: 50px;
-
-				.txtSc {
-					height: 33%;
-
-					span {
-						color: orange;
+				.lower {
+					width: 100%;
+					margin-bottom: 10px;
+					display: flex;
+					flex-wrap: wrap;
+					margin-bottom: 20px;
+					label {
+						font: bold 1rem/1 'arial';
+						color: #555;
+						margin-right: 10px;
+						position: relative;
+						top: -10px;
 					}
+					textarea {
+						width: 100%;
+						border: none;
+						border-bottom: 1px solid #555;
+						margin-right: 20px;
+						outline: none;
+						background: none;
+						resize: none;
+					}
+				}
+
+				.btnPd {
+					padding-right: 1.2rem;
+					.btnSet {
+						width: 100%;
+
+						display: flex;
+						gap: 10px;
+						justify-content: flex-end;
+						margin-bottom: 20px;
+
+						input {
+							width: 100px;
+							display: block;
+							height: 40px;
+							background: #444;
+							border: 1px solid #666;
+							font: 1rem/40px 'arial';
+							color: #f3eee8;
+							text-align: center;
+							cursor: pointer;
+						}
+					}
+				}
+				.texBox {
+					margin-top: 20px;
+					text-align: center;
+					margin-bottom: 20px;
 				}
 			}
 		}
 
-		#mapBox {
-			padding-bottom: 5rem;
-			.btnAll {
+		#etc {
+			width: 40%;
+			height: 379px;
+			padding-top: 19px;
+			padding-left: 50px;
+
+			.txtSc {
+				height: 33%;
+
+				span {
+					color: orange;
+				}
+			}
+		}
+	}
+
+	#mapBox {
+		padding-bottom: 5rem;
+		.btnAll {
+			display: flex;
+			justify-content: space-between;
+			border-left: 1px solid #888;
+			border-right: 1px solid #888;
+			.btnSet {
+				width: 50%;
 				display: flex;
 				justify-content: space-between;
-				border-left: 1px solid #888;
-				border-right: 1px solid #888;
-				.btnSet {
-					width: 50%;
-					display: flex;
-					justify-content: space-between;
 
-					button {
-						width: 33.333%;
-						border: none;
-						padding: 2%;
-						background: #f3eee8;
-						font-size: 15px;
-						font-weight: bold;
-						cursor: pointer;
+				button {
+					width: 33.333%;
+					border: none;
+					padding: 2%;
+					background: #f3eee8;
+					font-size: 15px;
+					font-weight: bold;
+					cursor: pointer;
 
-						&:hover {
-							background: #444;
-							color: #e1d6c4;
-						}
-					}
-				}
-				ul {
-					display: flex;
-					width: 50%;
-					justify-content: space-between;
-					border-left: 1px solid #888;
-
-					li {
-						width: 33.333%;
-						text-align: center;
-						padding: 2%;
-						background: #f3eee8;
-						font-weight: bold;
-						font-size: 15px;
-						cursor: pointer;
-
-						&:hover {
-							background: #444;
-							color: #e1d6c4;
-						}
-					}
-
-					li.on {
-						color: #9d958a;
+					&:hover {
+						background: #444;
+						color: #e1d6c4;
 					}
 				}
 			}
-		}
-		.container {
-			width: 100%;
-			height: 60vh;
-			background: #333;
-			position: relative;
+			ul {
+				display: flex;
+				width: 50%;
+				justify-content: space-between;
+				border-left: 1px solid #888;
 
-			.map,
-			.view {
-				width: 100%;
-				height: 100%;
-				background: #333;
-				position: absolute;
-				top: 0;
-				left: 0px;
-				opacity: 0;
-				z-index: 1;
+				li {
+					width: 33.333%;
+					text-align: center;
+					padding: 2%;
+					background: #f3eee8;
+					font-weight: bold;
+					font-size: 15px;
+					cursor: pointer;
 
-				&.on {
-					opacity: 1;
-					z-index: 2;
+					&:hover {
+						background: #444;
+						color: #e1d6c4;
+					}
 				}
+
+				li.on {
+					color: #9d958a;
+				}
+			}
+		}
+	}
+	.container {
+		width: 100%;
+		height: 60vh;
+		background: #333;
+		position: relative;
+
+		.map,
+		.view {
+			width: 100%;
+			height: 100%;
+			background: #333;
+			position: absolute;
+			top: 0;
+			left: 0px;
+			opacity: 0;
+			z-index: 1;
+
+			&.on {
+				opacity: 1;
+				z-index: 2;
 			}
 		}
 	}
@@ -256,34 +254,32 @@
 
 .tablet,
 .mobile {
-	.Contact {
-		.content {
-			.upperBox {
-				flex-wrap: wrap;
-				#mailbox {
-					width: 100%;
+	.content {
+		.upperBox {
+			flex-wrap: wrap;
+			#mailbox {
+				width: 100%;
 
-					form {
-						border: none;
-						padding-right: 0px;
-					}
-				}
-
-				#etc {
-					width: 100%;
+				form {
+					border: none;
+					padding-right: 0px;
 				}
 			}
 
-			#mapBox {
-				.btnAll {
-					flex-wrap: wrap;
-					.btnSet {
-						width: 100%;
-					}
-					ul {
-						width: 100%;
-						border: none;
-					}
+			#etc {
+				width: 100%;
+			}
+		}
+
+		#mapBox {
+			.btnAll {
+				flex-wrap: wrap;
+				.btnSet {
+					width: 100%;
+				}
+				ul {
+					width: 100%;
+					border: none;
 				}
 			}
 		}

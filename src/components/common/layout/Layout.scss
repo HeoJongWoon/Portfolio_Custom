@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 
 .layout {
-	width: 100%;
+	width: 70vw;
+	margin: 100px auto;
 	position: relative;
 
 	figure {
@@ -10,6 +11,7 @@
 		opacity: 1;
 		position: relative;
 		background: #e1d6c4;
+		margin-bottom: 60px;
 
 		p {
 			width: 100%;

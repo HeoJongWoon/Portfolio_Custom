@@ -1,49 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Orbitron&family=Roboto:wght@100&display=swap');
 .Detail {
-	.content {
-		h1 {
-			text-align: center;
-			color: rgb(0, 0, 0);
-			font: 150px/1.4 'Nanum Myeongjo';
-		}
-		#Box {
+	h1 {
+		text-align: center;
+		color: rgb(0, 0, 0);
+		font: 150px/1.4 'Nanum Myeongjo';
+	}
+	#Box {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+
+		.txtBox {
 			width: 100%;
-			display: flex;
-			flex-wrap: wrap;
+			text-align: center;
 
-			.txtBox {
-				width: 100%;
-				text-align: center;
-
-				h2 {
-					font: 40px/1 'arial';
-					margin-left: 50px;
-					margin-top: 50px;
-					padding-bottom: 2rem;
-					border-bottom: 2px solid #555;
-				}
-
-				p {
-					padding-top: 2rem;
-					color: #555;
-					margin-bottom: 2rem;
-				}
-				span {
-					text-align: right;
-					color: #666;
-				}
+			h2 {
+				font: 40px/1 'arial';
+				margin-left: 50px;
+				margin-top: 50px;
+				padding-bottom: 2rem;
+				border-bottom: 2px solid #555;
 			}
 
-			.vidBox {
-				width: 100%;
-				height: 60vh;
-				position: relative;
+			p {
+				padding-top: 2rem;
+				color: #555;
+				margin-bottom: 2rem;
+			}
+			span {
+				text-align: right;
+				color: #666;
+			}
+		}
 
-				iframe {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-				}
+		.vidBox {
+			width: 100%;
+			height: 60vh;
+			position: relative;
+
+			iframe {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
 			}
 		}
 	}
