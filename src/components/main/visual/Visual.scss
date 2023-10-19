@@ -1,11 +1,10 @@
 .visual {
 	width: 100%;
 	height: calc(100vh - 90px);
-	background: linear-gradient(#999, #888);
 
 	.swiper {
 		height: 100%;
-		padding: 10vw 0px;
+		padding: 8vw 0px;
 
 		.swiper-slide {
 			width: 100%;
@@ -14,10 +13,22 @@
 			.inner {
 				width: 100%;
 				height: 100%;
-				background: lightcyan;
+				padding: 30px;
+				background: #fff;
 				display: flex;
-				justify-content: center;
-				align-items: center;
+				flex-wrap: wrap;
+				box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05);
+
+				.pic {
+					width: 100%;
+					height: 60%;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
 			}
 		}
 	}
