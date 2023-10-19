@@ -2,48 +2,53 @@
 
 .layout {
 	width: 70vw;
-	margin: 100px auto;
-	position: relative;
+	margin: 60px auto 100px;
+	min-height: 60vh;
+	transform: translateY(200px);
+	opacity: 0;
 
-	figure {
-		width: 100%;
-		height: 30vh;
-		opacity: 1;
-		position: relative;
-		background: #e1d6c4;
-		margin-bottom: 60px;
+	h1 {
+		font: normal 80px/1 'nanum myeongjo';
+		color: #444;
+		margin-bottom: 10px;
 
-		p {
-			width: 100%;
-			background: #f3eee8;
-			color: #e1d6c4;
-			font-size: 10vh;
-			height: 10vh;
-			left: 50%;
-			top: 50%;
-			position: absolute;
-			text-align: center;
-			transform: translate(-50%, -50%);
+		span {
+			opacity: 0;
+			transform: scale(3);
+			transition-duration: 0.5s;
 		}
 	}
+	.bar {
+		width: 0px;
+		height: 1px;
+		background: #000;
+		margin-bottom: 40px;
+		transition: 1s 1s;
+	}
 
-	.content {
-		width: 70vw;
-		margin: 5vh auto;
-		min-height: 60vh;
+	figure {
+		width: 0%;
+		height: 180px;
+		background: #555;
+		margin-bottom: 60px;
+		transition: width 1s 1.3s;
+	}
+
+	&.on {
 		opacity: 1;
+		transform: translateY(0px);
 
 		h1 {
-			font: bold 100px/1 'Nanum Myeongjo';
-			color: #9d958a;
-			margin-bottom: 30px;
-
 			span {
-				display: inline-block;
-				opacity: 0;
-				transform: scale(3);
-				transition-duration: 0.5s;
+				opacity: 1;
+				transform: scale(1);
 			}
+		}
+		.bar {
+			width: 50px;
+		}
+		figure {
+			width: 100%;
 		}
 	}
 }
@@ -51,20 +56,16 @@
 .tablet,
 .mobile {
 	.layout {
-		.content {
-			h1 {
-				font-size: 80px;
-			}
+		h1 {
+			font-size: 80px;
 		}
 	}
 }
 
 .mobile {
 	.layout {
-		.content {
-			h1 {
-				font-size: 50px;
-			}
+		h1 {
+			font-size: 50px;
 		}
 	}
 }
