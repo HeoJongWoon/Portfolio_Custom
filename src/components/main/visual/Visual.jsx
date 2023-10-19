@@ -10,7 +10,7 @@ function Visual() {
 	console.log(data);
 
 	return (
-		<section className='visual'>
+		<section className='visual myScroll'>
 			<div className='titBox'>
 				<ul>
 					{data.map((tit, idx) => {
