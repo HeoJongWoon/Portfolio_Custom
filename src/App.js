@@ -44,7 +44,7 @@ function App() {
 			<Route path='/contact' component={Contact} />
 			<Route path='/community' component={Community} />
 			<Route path='/detail/:id' component={Detail} />
-			{/* <Route path='/' component={Footer} /> */}
+			{/* <Footer /> */}
 			<Menu />
 		</main>
 	);

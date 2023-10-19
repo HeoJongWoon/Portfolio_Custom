@@ -5,7 +5,6 @@ export const useMedia = (opt) => {
 	const defOpt = { mobile: 640, tablet: 1000, laptop: 1400 };
 	//해당 커스텀훅 호출시 특정 옵션이 전달되면 해당값으로 defOpt값을 덮어쓰기해서 합침
 	const result = { ...defOpt, ...opt };
-	console.log(result);
 	const [Type, setType] = useState('');
 
 	const getClientWid = () => {
