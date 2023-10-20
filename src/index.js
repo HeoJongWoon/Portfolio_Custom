@@ -60,6 +60,11 @@ ReactDOM.render(
 	- 서버 데이터가 필요할때마다 계속 가져와야됨
 	- 새로 fetching을 할때 이미 불러온적이 있는 똑같은 데이터경우는 caching 처리된 데이터를 재활용해서 불필요한 refetching방지
 
+	비동기데이터가 아닌 클라이언트 데이터도 굳이 redux가 아닌 context api를 활용하는 이유
+	- 복잡한 구조의 비동기 데이터는 react-query가 어차피 처리하기 때문에
+	- 간단한 클라이언트 사이드 데이터를 굳이 리덕스라는 라이브러리를 쓰면서까지 활용한 필요가 없고
+	- 기존리액트의 기능인 useContext를 활용한 커스텀훅을 활용
+
 	client-side-data (useContext를 활용한 커스텀훅을 전역관리)
 	server-side-data (react-query를 활용해서 전역상태로 저장하는 것이 아닌 캐싱처리)
 	
