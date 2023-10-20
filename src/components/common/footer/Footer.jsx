@@ -1,12 +1,12 @@
 import React from 'react';
-import '../footer/Footer.scss';
+import './Footer.scss';
 
 const Footer = () => {
 	return (
 		<footer>
 			<div className='top'>
 				<h2>Footer</h2>
-				<div className='menu'>
+				<div className='footerMenu'>
 					<ul>
 						<li>
 							<h3>COMMUNITY</h3>
