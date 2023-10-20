@@ -1,8 +1,9 @@
 import Layout from '../../common/layout/Layout';
 import './Members.scss';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 export default function Members() {
+	console.log('member');
 	const initVal = {
 		userid: '',
 		pwd1: '',
@@ -110,6 +111,14 @@ export default function Members() {
 			setErrs(check(Val));
 		}
 	};
+
+	const showCheck = () => {
+		setErrs(check(Val));
+	};
+
+	useEffect(() => {
+		showCheck();
+	}, [Val]);
 
 	return (
 		<Layout title={'Members'}>
