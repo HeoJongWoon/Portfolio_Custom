@@ -99,44 +99,46 @@ export default function Gallery() {
 
 					<div className='picFrame'>
 						<Masonry elementType={'div'} options={{ transitionDuration: '0.5s' }} disableImagesLoaded={false} updateOnEachImageLoad={false}>
-							{Pics.map((data, idx) => {
-								return (
-									<article key={idx}>
-										<div className='inner'>
-											<div className='pic'>
-												<img
-													src={`https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_m.jpg`}
-													alt={`https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_b.jpg`}
-													onClick={(e) => {
-														setActiveURL(e.target.getAttribute('alt'));
-														dispatch(open());
-													}}
-												/>
-												<img
-													src={`https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_m.jpg`}
-													alt={`https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_b.jpg`}
-													onClick={(e) => {
-														setActiveURL(e.target.getAttribute('alt'));
-														dispatch(open());
-													}}
-												/>
-											</div>
-											<h2>{data.title}</h2>
+							{/* 해당 데이터가 어떤이유에서건 없을 때 해당 객체안의 property를 호출할 때 런타임 에러가 뜨는 경우이므로 배열값 자체가 없으면 렌더링을 안해서 property 오류해결 */}
+							{Pics.lenght !== 0 &&
+								Pics.map((data, idx) => {
+									return (
+										<article key={idx}>
+											<div className='inner'>
+												<div className='pic'>
+													<img
+														src={`https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_m.jpg`}
+														alt={`https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_b.jpg`}
+														onClick={(e) => {
+															setActiveURL(e.target.getAttribute('alt'));
+															dispatch(open());
+														}}
+													/>
+													<img
+														src={`https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_m.jpg`}
+														alt={`https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_b.jpg`}
+														onClick={(e) => {
+															setActiveURL(e.target.getAttribute('alt'));
+															dispatch(open());
+														}}
+													/>
+												</div>
+												<h2>{data.title}</h2>
 
-											<div className='profile'>
-												<img
-													src={`http://farm${data.farm}.staticflickr.com/${data.server}/buddyicons/${data.owner}.jpg`}
-													alt={data.owner}
-													onError={(e) => {
-														e.target.setAttribute('src', 'https://www.flickr.com/images/buddyicon.gif');
-													}}
-												/>
-												<span onClick={handleClickProfile}>{data.owner}</span>
+												<div className='profile'>
+													<img
+														src={`http://farm${data.farm}.staticflickr.com/${data.server}/buddyicons/${data.owner}.jpg`}
+														alt={data.owner}
+														onError={(e) => {
+															e.target.setAttribute('src', 'https://www.flickr.com/images/buddyicon.gif');
+														}}
+													/>
+													<span onClick={handleClickProfile}>{data.owner}</span>
+												</div>
 											</div>
-										</div>
-									</article>
-								);
-							})}
+										</article>
+									);
+								})}
 						</Masonry>
 					</div>
 				</div>
