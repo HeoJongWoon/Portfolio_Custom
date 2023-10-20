@@ -1,3 +1,4 @@
+import { useDebounce } from '../../../hooks/useDebounce';
 import Layout from '../../common/layout/Layout';
 import './Members.scss';
 import { useState, useRef, useEffect } from 'react';
@@ -18,6 +19,8 @@ export default function Members() {
 	const refSelGroup = useRef(null);
 	const [Val, setVal] = useState(initVal);
 	const [Errs, setErrs] = useState({});
+
+	const DebouncedVal = useDebounce(Val);
 
 	const resetForm = (e) => {
 		e.preventDefault();
@@ -112,13 +115,13 @@ export default function Members() {
 	};
 
 	const showCheck = () => {
-		setErrs(check(Val));
+		setErrs(check(DebouncedVal));
 	};
 
 	useEffect(() => {
 		console.log('Val state값 변경에 의해서 showCheck함수 호출');
 		showCheck();
-	}, [Val]);
+	}, [DebouncedVal]);
 
 	return (
 		<Layout title={'Members'}>
