@@ -3,7 +3,6 @@ import './Members.scss';
 import { useState, useRef, useEffect } from 'react';
 
 export default function Members() {
-	console.log('member');
 	const initVal = {
 		userid: '',
 		pwd1: '',
@@ -117,6 +116,7 @@ export default function Members() {
 	};
 
 	useEffect(() => {
+		console.log('Val state값 변경에 의해서 showCheck함수 호출');
 		showCheck();
 	}, [Val]);
 
